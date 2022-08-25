@@ -1,0 +1,53 @@
+*{  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1500px;
+  /* display: flex;
+  flex-flow: row wrap; */
+}
+/* desktop hata 1200px*/
+body{
+  background-color: #000;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  /* .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  } */
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
