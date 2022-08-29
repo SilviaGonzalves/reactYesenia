@@ -1,0 +1,27 @@
+.imagenItem{
+    width: 200px;
+    height: 225px; 
+    padding: 10px 10px;
+}
+
+.centrar{
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+.contenedorItem{
+    width: 300px;
+    height: 440px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border: 1px solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.tamLetra{
+    font-size: 25px;
+}

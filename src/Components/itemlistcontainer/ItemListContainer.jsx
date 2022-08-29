@@ -1,53 +1,34 @@
 
-import ItemCount from "../itemcount/ItemCount"
+import { useEffect, useState } from "react"
 import './ItemListContainer.css';
-// import Item from "./Item"
+import  pedirDatos  from "../../helpers/pedirDatos"
+// import  pedirDatos  from "../helpers/pedirDatos.jsx"
+import ItemList from "../itemlist/ItemList"
 
 
 
 const ItemListContainer = () => {
 
-    // const nombres = [
-    //     {nombre:"Silvia",
-    //      edad: 60
+    const [productos, setProductos] = useState([])
 
-    //     },
-    //     {nombre:"Belen",
-    //      edad:40
- 
-    //     },
-    //     {nombre:"Matias",
-    //      edad:35
-
-    //     }
-    // ]
-
-     const productos=[
-        {stock:10,
-         img:"/assets/imagenes/pintura1.jpg",
-         desc:"Esmalte cremoso"
-        },
-        {stock:20,
-         img:"/assets/imagenes/espejo1.jpg",
-         desc:"Esmalte espejado"
-        },
-        {stock:0,
-         img:"/assets/imagenes/accesorio1.jpg",
-         desc:"Accesorios "
-        }
-     ]
+    useEffect(() => {
+        pedirDatos()
+            .then( (res) => {
+                setProductos(res)
+            })
+            .catch( (error) => {
+                console.log(error)
+            })
+            .finally(() => {
+                // console.log("Fin del proceso")
+            })
+    }, [])
 
     return (
-        <div className="contenedorGral">
-                    {/* <p>Hola, nombres de ItemListContainer</p>
-                <Item pasonombre={nombres[0]} />
-                <Item pasonombre={nombres[1]} />
-                <Item pasonombre={nombres[2]} /> */}
-                <ItemCount productos={productos[0]} />
-                <ItemCount productos={productos[1]} />
-                <ItemCount productos={productos[2]} />
-
+        <div>
+            <ItemList productos={productos}/>
         </div>
+
     )
 }
 export default ItemListContainer
