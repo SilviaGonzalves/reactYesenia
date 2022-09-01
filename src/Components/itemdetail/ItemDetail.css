@@ -1,0 +1,41 @@
+.contenedorGral{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.contenedorIzq{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorDer{
+    width: 400px;
+    margin: 0 auto;
+    font-size:20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.imagenItem{
+
+    width: 250px;
+    height: 275px; 
+    padding: 10px 10px;
+    object-fit: cover;
+}
+.titulo{
+    margin-left : 0px;
+}
+.titulo1{
+    margin-top:40px;
+}
+.letraTitulo{
+    font-size: 25px;
+}

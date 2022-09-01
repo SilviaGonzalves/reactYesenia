@@ -1,6 +1,7 @@
 import React from 'react'
-import Contador from '../contador/Contador';
+
 import './Item.css';
+import { Link } from 'react-router-dom'
 
 const Item = ({producto}) => {
 
@@ -10,9 +11,12 @@ const Item = ({producto}) => {
             <h2 className="centrar">{producto.nombre}</h2>
             <img src={producto.img} className="imagenItem" alt="img"/>
             <p className="tamLetra">Precio: {producto.precio}</p>
-            {producto.stock === 0 ? <h3 className="centrar">Sin stock</h3>:<p className="tamLetra">Stock: {producto.stock}</p>}
-            {producto.stock !== 0 ? <Contador stock={producto.stock}/> : null}
-            
+            {producto.stock === 0 
+              ? <h3 className="centrar">Sin stock</h3>
+              : <p className="tamLetra">Stock: {producto.stock}</p>
+            }
+            <Link to={`/item/${producto.id}`} className="btn btn-primary my-2">Ver detalle</Link>
+        
     </div>
   )
 }

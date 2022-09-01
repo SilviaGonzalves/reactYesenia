@@ -4,7 +4,7 @@ import Item from "../item/Item";
 
 
 const ItemList = ({productos = []}) => {
-
+console.log("paso 3")
      return (
            <div className="container my-5 contenedorGral">
               {productos.map((prod) => {

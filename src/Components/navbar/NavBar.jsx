@@ -2,18 +2,24 @@
 
 import CartWidget from '../cartwidget/CartWidget';
 import './NavBar.css';
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
 
     return (
 
             <header className="container-fluid">
-                <img src="/assets/imagenes/logoyesenia.png" id="imagen-logo" alt="logo" />
-          
+                <Link to="/">
+                    <img src="/assets/imagenes/logoyesenia.png" id="imagen-logo" alt="logo" />
+                </Link>
+
                 <nav >
-                    <a href="#top">Cremosos</a>
-                    <a href="#top">Espejos</a>
-                    <a href="#top">Accesorios</a>
+                   
+                    <Link to="/productos/cremosos">Cremosos</Link>
+                    <Link to="/productos/espejados">Espejos</Link>
+                    <Link to="/productos/accesorios">Accesorios</Link>
+
+
                 </nav>
               
                 <CartWidget/>
@@ -23,3 +29,4 @@ const NavBar = () => {
     )
 }
 export default NavBar
+

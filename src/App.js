@@ -1,20 +1,32 @@
 import './App.css';
 import NavBar from "./Components/navbar/NavBar.jsx";
-import Contenido from "./Components/contenido/Contenido.jsx";
+// import Contenido from "./Components/contenido/Contenido.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './Components/itemlistcontainer/ItemListContainer.jsx';
+import ItemDetailContainer from './Components/itemdetailcontainer/ItemDetailContainer.jsx';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+// import Nosotros from './components/nosotros/Nosotros';
+// import Contacto from './components/contacto/Contacto';
 
 
 const App = () => {
 
   return (
-    <div >
+    <BrowserRouter>
 
       <NavBar/>
-      
-      <Contenido/>
-      <ItemListContainer/>
-    </div>
+      <Routes>
+          <Route path="/" element={<ItemListContainer/>}/>
+          <Route path='/productos/:categoryId' element={<ItemListContainer/>} />
+          <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
+
+          {/* <Route path="/nosotros" element={<Nosotros/>}/>
+          <Route path="/contacto" element={<Contacto/>}/>  */}
+          
+          <Route path='*' element={ <Navigate to="/"/>} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 

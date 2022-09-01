@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState} from "react"
-// import { Button } from 'reactstrap'
+import { Button } from 'reactstrap'
 
 
 const Contador = ({stock}) => {
@@ -22,11 +22,13 @@ const Contador = ({stock}) => {
 
   return (
     <div>
-       <button onClick={handleRestar} className="btn btn-outline-primary">-</button>
-       <span className="mx-2">{counter}</span>
-      
-       <button onClick={handleSumar} className="btn btn-primary">+</button>
-       {/* <Button className='my-2' disabled={stock<=0} >Añadir al carrito</Button> */}
+      <div className="alinear">
+            <Button onClick={handleRestar} className="mx-2 btn btn-primary"> - </Button>
+            <span className="mx-2">{counter}</span>
+            <Button onClick={handleSumar} className="mx-2 btn btn-primary"> + </Button>
+      </div>
+            <h3> {"\n"} </h3>
+            <Button className='my-2' disabled={stock<=0} >Añadir al carrito</Button> 
     </div>
   )
 }
