@@ -2,68 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 1500px;
+  /* display: flex;
+  flex-flow: row wrap; */
 }
 /* desktop hata 1200px*/
 body{
   background-color: #000;
   font-family: 'Roboto', sans-serif;
 
-}
-
-.header{ 
-  position: fixed;
-  width: 100%;
-  top: 0px;
-  background-color: rgb(184, 88, 152);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 200px;
-}
-#imagen-logo{  
-  width: 340px;
-  height:200px;
-  font-size: 40px;
-  float: left;
-
-}
-.classNav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 25px;
-  margin-top: 100px;
-}
-nav a{
-  color: #000;
-  width: 160px;
-  text-decoration: none;
-  padding: 8px;
-  text-shadow: -2px 2px 7px #000;
-}
-.tituloPpal{
-  font-size: 50px;
-  color: antiquewhite;
-  height: 300px;
-}
-.classContenido{
-  position: relative;
-
-}
-h1 {
-  position: relative;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 45px;
-  text-align: center;
-  color:  rgb(184, 88, 152);
-  margin-top: 200px;
-}
-.classP{
-  color: antiquewhite;
-  text-align: center;
 }
 
 
