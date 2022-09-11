@@ -32,6 +32,6 @@ const Contador = ({stock, counter, setCounter, handleAgregar}) => {
   )
 }
 
-
+ 
 
 export default Contador
