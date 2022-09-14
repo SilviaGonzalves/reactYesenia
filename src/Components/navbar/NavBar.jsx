@@ -4,7 +4,10 @@ import CartWidget from '../cartwidget/CartWidget';
 import './NavBar.css';
 import { Link } from 'react-router-dom'
 
+
 const NavBar = () => {
+
+ 
 
     return (
 
@@ -24,6 +27,7 @@ const NavBar = () => {
 
                 </nav>
               <div className='estCarrito'>
+                   
                     <CartWidget/>
                                   
               </div>

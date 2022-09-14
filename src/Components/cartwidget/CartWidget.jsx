@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 const  CartWidget = () => {
     
-    const { sumoCantCarrito } = useContext(CartContext)
+    const { cart, sumoCantCarrito } = useContext(CartContext)
 
 
     return (
-        <Link to="/cart">
+        <Link to="/cart" className={`widget ${cart.length > 0 ? "widget-visible" : " "}` }>
            
              <img src="/assets/imagenes/imagcarrito.png" id="imagen-carrito" alt="carrito" />
              <span>{sumoCantCarrito()}</span>

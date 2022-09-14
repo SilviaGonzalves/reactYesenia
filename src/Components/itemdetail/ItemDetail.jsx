@@ -14,14 +14,17 @@ const ItemDetail = ({item}) => {
       const [cantidad, setCantidad] = useState(0)
 
       const handleAgregar = () => {
-           const itemToCart = {
-                 id: item.id,
-                 nombre: item.nombre,
-                 precio: item.precio,
-                 cantidad
-           }
-
-           addToCart(itemToCart)
+          if (cantidad > 0) {
+            
+                  const itemToCart = {
+                   id: item.id,
+                   nombre: item.nombre,
+                   precio: item.precio,
+                   cantidad
+                  }
+                  addToCart(itemToCart)
+             }
+           
       }
   return (
     <div className="container my-5 contenedorGral">
@@ -43,12 +46,6 @@ const ItemDetail = ({item}) => {
               /> 
             : <h3> {"\n"} </h3>
       } */}
-
-
-
-
-
-
 
             {
             isInCart(item.id)
@@ -78,9 +75,11 @@ const ItemDetail = ({item}) => {
             <h2 className="titulo1" ><strong>Descripción del producto: </strong></h2>
             <p>{item.desc}</p>
       </div>
-      <div>
-            <Link to="/cart" className='btn btn-success my-2'>Terminar mi compra</Link> 
-            <Link to="/" className='btn btn-success my-2'>Volver al inicio</Link>
+      <div className='estBotones'>
+            <Link to="/cart" className='btn btn-success mx-5'>Terminar mi compra</Link> 
+
+               
+            <Link to="/" className='btn btn-success mx-5'>Volver al inicio</Link>
       </div> 
    </div> 
 )}

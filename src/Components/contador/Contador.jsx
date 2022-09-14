@@ -22,12 +22,25 @@ const Contador = ({stock, counter, setCounter, handleAgregar}) => {
   return (
     <div>
       <div className="alinear">
-            <Button onClick={handleRestar} className="mx-2 btn btn-primary"> - </Button>
+            <Button onClick={handleRestar} 
+            className="mx-2 btn btn-primary" 
+            disabled ={counter === 0 ? true : false}> 
+
+            - </Button>
+
             <span className="mx-2">{counter}</span>
-            <Button onClick={handleSumar} className="mx-2 btn btn-primary"> + </Button>
+
+            <Button onClick={handleSumar} 
+            className="mx-2 btn btn-primary"
+            disabled ={counter === stock ? true : false}>
+         
+
+            + </Button>
+
       </div>
             <h3> {"\n"} </h3>
-            <Button onClick={handleAgregar} className='my-2' disabled={stock<=0} >Añadir al carrito</Button> 
+            <Button onClick={handleAgregar} className='my-2' disabled={(stock<=0) || (counter === 0)} >
+              Añadir al carrito</Button> 
     </div>
   )
 }

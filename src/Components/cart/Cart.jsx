@@ -2,10 +2,13 @@
 import {  useCartContext } from '../context/CartContext'
 import './Cart.css';
 import {BsTrash} from "react-icons/bs"
+import { Navigate } from 'react-router-dom'
 
 const Cart = () => {
 
   const { cart, sumaTotalCarrito, vaciarCarrito, removeItem } = useCartContext()
+
+  if (cart.length === 0 )  return <Navigate to="/"/>
 
   return (
     <div className='container my-5 contGral'>

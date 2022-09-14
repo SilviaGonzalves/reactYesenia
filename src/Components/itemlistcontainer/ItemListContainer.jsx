@@ -5,7 +5,7 @@ import  pedirDatos  from "../../helpers/pedirDatos"
 // import  pedirDatos  from "../helpers/pedirDatos.jsx"
 import ItemList from "../itemlist/ItemList"
 import { useParams } from 'react-router-dom'
-
+import Loader from "../loader/Loader"
 
 const ItemListContainer = () => {
 
@@ -37,7 +37,7 @@ const ItemListContainer = () => {
         <div>
             {
                 loading 
-                ? <h2>Cargando...</h2>
+                ? <Loader/>
                 : <ItemList productos={productos}/>
             }
 
