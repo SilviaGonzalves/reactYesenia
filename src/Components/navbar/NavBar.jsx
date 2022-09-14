@@ -19,11 +19,14 @@ const NavBar = () => {
                     <Link to="/productos/espejados">Espejos</Link>
                     <Link to="/productos/accesorios">Accesorios</Link>
 
+                    <Link to="/nosotros">Nosotros</Link>
+                    {/* <Link to="/contacto">Contacto</Link> */}
 
                 </nav>
-              
-                <CartWidget/>
-        
+              <div className='estCarrito'>
+                    <CartWidget/>
+                                  
+              </div>
             </header>
 
     )

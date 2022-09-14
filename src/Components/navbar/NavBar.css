@@ -40,5 +40,18 @@ header{
   #imagen-carrito{
     width: 70px;
     height:70px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+  }
+  .estCarrito{
+    width: 150px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .estSpam{
+    width: 100px;
+    font-size: 30px;
+    color: #000;
   }

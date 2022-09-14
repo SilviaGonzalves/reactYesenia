@@ -15,7 +15,7 @@ const Item = ({producto}) => {
               ? <h3 className="centrar">Sin stock</h3>
               : <p className="tamLetra">Stock: {producto.stock}</p>
             }
-            <Link to={`/item/${producto.id}`} className="btn btn-primary my-2">Ver detalle</Link>
+            <Link to={`/item/${producto.id}`} className="btn btn-primary my-2 cambioColor">Ver detalle</Link>
         
     </div>
   )

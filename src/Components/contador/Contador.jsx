@@ -1,11 +1,10 @@
 import React from 'react'
-import { useState} from "react"
 import { Button } from 'reactstrap'
 
 
-const Contador = ({stock}) => {
+const Contador = ({stock, counter, setCounter, handleAgregar}) => {
    
-    const [counter, setCounter] = useState(0)
+    // const [counter, setCounter] = useState(0)
 
     const handleSumar = () => {
         if (counter < stock){
@@ -28,7 +27,7 @@ const Contador = ({stock}) => {
             <Button onClick={handleSumar} className="mx-2 btn btn-primary"> + </Button>
       </div>
             <h3> {"\n"} </h3>
-            <Button className='my-2' disabled={stock<=0} >Añadir al carrito</Button> 
+            <Button onClick={handleAgregar} className='my-2' disabled={stock<=0} >Añadir al carrito</Button> 
     </div>
   )
 }
