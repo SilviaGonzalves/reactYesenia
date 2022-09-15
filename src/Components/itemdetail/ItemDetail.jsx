@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom';
 
 const ItemDetail = ({item}) => {
 
-      const { addToCart, isInCart } = useCartContext()
-
+      const { cart, addToCart, isInCart } = useCartContext()
 
 
       const [cantidad, setCantidad] = useState(0)
@@ -76,9 +75,9 @@ const ItemDetail = ({item}) => {
             <p>{item.desc}</p>
       </div>
       <div className='estBotones'>
-            <Link to="/cart" className='btn btn-success mx-5'>Terminar mi compra</Link> 
+            <Link to="/cart" className='btn btn-success mx-5'>Terminar mi compra</Link>  
 
-               
+                                  
             <Link to="/" className='btn btn-success mx-5'>Volver al inicio</Link>
       </div> 
    </div> 
