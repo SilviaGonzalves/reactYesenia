@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const ItemDetail = ({item}) => {
 
-      const { cart, addToCart, isInCart } = useCartContext()
+      const { addToCart, isInCart } = useCartContext()
 
 
       const [cantidad, setCantidad] = useState(0)
@@ -31,20 +31,6 @@ const ItemDetail = ({item}) => {
             <h2 className="letraTitulo"><strong>{item.nombre}</strong></h2>
             <img src={item.img} className="imagenItem" alt="img"/>
             <p className="tamLetra"><strong>Precio: </strong>{item.precio}</p>
-
-      {/* {item.stock === 0 
-            ? <h3 className="centrar"><strong>Sin stock</strong></h3>
-            : <p className="tamLetra"><strong>Stock: </strong>{item.stock}</p>
-      }   
-      {item.stock !== 0 
-            ? <Contador 
-            stock={item.stock}
-            counter={cantidad}
-            setCounter={setCantidad}
-            handleAgregar={handleAgregar}
-              /> 
-            : <h3> {"\n"} </h3>
-      } */}
 
             {
             isInCart(item.id)

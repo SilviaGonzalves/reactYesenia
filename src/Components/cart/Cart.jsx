@@ -2,7 +2,7 @@
 import {  useCartContext } from '../context/CartContext'
 import './Cart.css';
 import {BsTrash} from "react-icons/bs"
-import { Navigate } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 
 const Cart = () => {
 
@@ -33,6 +33,7 @@ const Cart = () => {
             <div className='estTotal'>
                 <h4>Total compra: ${sumaTotalCarrito()}</h4>
                 <button onClick={vaciarCarrito} className="btn btn-danger">Vaciar Carrito</button>
+                <Link className="btn btn-success mx-3" to="/checkout">Armar orden</Link>
             </div>
     </div>
   )

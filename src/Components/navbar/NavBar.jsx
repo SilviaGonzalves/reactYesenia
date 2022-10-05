@@ -23,7 +23,6 @@ const NavBar = () => {
                     <Link to="/productos/accesorios">Accesorios</Link>
 
                     <Link to="/nosotros">Nosotros</Link>
-                    {/* <Link to="/contacto">Contacto</Link> */}
 
                 </nav>
               <div className='estCarrito'>
